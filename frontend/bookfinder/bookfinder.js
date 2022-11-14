@@ -24,8 +24,17 @@ makeRequest = (query) => {
 displayBook = (item) => {
     divBook = document.createElement("div");
     divBook.classList.add("book");
-    divBook.href = item.selfLink;
-    console.log(item.selfLink);
-    divBook.innerHTML = item.volumeInfo.title + "<br>";
+    divBook.innerHTML = `
+        <a href="${item.volumeInfo.canonicalVolumeLink}">${item.volumeInfo.title}</a>
+        <div class="book-info">
+            <strong>Author: </strong> ${item.volumeInfo.authors ? item.volumeInfo.authors[0] : "N/A"}
+        </div>
+        <div class="book-info">
+            <strong>Publisher: </strong> ${item.volumeInfo.publisher ? item.volumeInfo.publisher : "N/A"}
+        </div>
+        <div class="book-info">
+            <strong>Published: </strong> ${item.volumeInfo.publishedDate ? item.volumeInfo.publishedDate : "N/A"}
+        </div>
+    `
     return divBook;
 }
