@@ -26,6 +26,8 @@ displayBook = (item) => {
     divBook.classList.add("book");
     divBook.innerHTML = `
         <a href="${item.volumeInfo.canonicalVolumeLink}">${item.volumeInfo.title}</a>
+        <br>
+        <img src="${item.volumeInfo.imageLinks.smallThumbnail}" alt="${item.volumeInfo.title}">
         <div class="book-info">
             <strong>Author: </strong> ${item.volumeInfo.authors ? item.volumeInfo.authors[0] : "N/A"}
         </div>
