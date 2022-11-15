@@ -1,4 +1,106 @@
-#content {
-    color: red;
-    size: 20px;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+h1 {
+    font-size: 40px;
+    color: #df5454;
+    text-shadow: 1px 1px rgb(0 0 0 / 40%);
+}
+
+#search {
+    display: flex;
+    position: relative;
+    background: hsla(0,0%,100%,.6);
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-shadow: 0 2px rgb(0 0 0 / 5%);
+    color: #424242;
+    text-align: center;
+    opacity: .8;
+}
+
+#search-input {
+    width: 460px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    outline: none;
+    user-select: none;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 520px) {
+    #search-input{
+        width: 350px;
+    } 
+}
+
+#search-button {
+    margin: 2px;
+    background-color: #df5454;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 30px;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.book {
+    background: #f8faf0;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    box-shadow: 0 1px rgb(0 0 0 / 5%);
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+    .book {
+        width: 49%;
+    }
+}
+
+.book a {
+    padding: 15px;
+    width: 95%;
+    font-size: 18px;
+    text-align: justify;
+    text-decoration: none;
+    font-weight: bold;
+    color: #df5454;
+}
+
+.book img {
+    width: 128px;
+    margin: 10px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 12px;
+}
+
+.book-info div {
+    padding: 5px;
 }
